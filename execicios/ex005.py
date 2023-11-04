@@ -1,4 +1,4 @@
-# Exercício 5
+# Exercício 5 (Aula 007)
 
 # Faça um programa que leia um número inteiro e mostre na tela o seu sucessor e seu antecessor. 
 
