@@ -6,10 +6,10 @@
 
 print('Cálculo de Média Escolar')
 
-grade1 = int(input('Digite a 1ª nota: '))
-grade2 = int(input('Digite a 2ª nota: '))
+grade1 = float(input('Digite a 1ª nota: '))
+grade2 = float(input('Digite a 2ª nota: '))
 
-average_result = round((grade1 + grade2) / 2, 2)
+average_result = round((grade1 + grade2) / 2, 1)
 
 print(f'Média: {average_result}')
 
