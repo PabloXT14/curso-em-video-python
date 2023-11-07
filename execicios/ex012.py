@@ -4,9 +4,11 @@
 
 # Resolução
 
-print('Preço do produto com 5% off')
+print('Calculando Desconto')
 
-price = float(input('Digite o preço do produto e ganhe 5% de desconto: '))
+print('Info: produtos com 5% off')
+
+price = float(input('Digite o preço do produto R$ '))
 
 percentage_discount = 5 / 100
 
@@ -14,5 +16,8 @@ discount_price = round(price * percentage_discount, 2)
 
 final_price = round(price - discount_price, 2)
 
+print('-' * 40)
+print(f'Preço sem desconto: R$ {price}')
 print(f'Desconto: R$ {discount_price}')
 print(f'Preço final: R$ {final_price}')
+print('-' * 40)
