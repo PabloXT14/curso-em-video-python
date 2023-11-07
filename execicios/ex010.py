@@ -5,12 +5,18 @@
 
 # Resolução
 
-print('Conversão Real -> Dólar')
+print('Conversão Real -> Dólar | Euro | Iene')
 
-real_money = float(input('Digite um valor em reais (ex: 6.54): '))
+real_money = float(input('Digite quantos reais você tem na carteira, R$'))
 
-dollar_real_exchange_value = 3.27
+real_dollar_exchange_value = 4.89
+real_euro_exchange_value = 5.24
+real_iene_exchange_value = 0.033
 
-dollar_money = round(real_money / dollar_real_exchange_value, 2)
+dollar_money = round(real_money / real_dollar_exchange_value, 2)
+euro_money = round(real_money / real_euro_exchange_value, 2)
+iene_money = round(real_money / real_iene_exchange_value, 2)
 
-print(f'R${real_money} == US${dollar_money}')
+print(f'R${real_money} = US${dollar_money}')
+print(f'R${real_money} = €{euro_money}')
+print(f'R${real_money} = ¥{iene_money}')
