@@ -4,12 +4,12 @@
 
 # Resolução
 
-print('Calculo de tinta para pintar a parede')
+print('Pintando Parede')
 
-print('Info: 1L de tinta pinta 2m²')
+print('Info: 1L da nossa tinta pinta 2m²')
 
-height = float(input('Digite a altura da parede (em metros): '))
 width = float(input('Digite a largura da parede (em metros): '))
+height = float(input('Digite a altura da parede (em metros): '))
 
 wall_area = height * width
 
@@ -17,4 +17,8 @@ base_area_per_liter_of_paint = 2
 
 paint_liters_needed = round(wall_area / base_area_per_liter_of_paint, 2) 
 
-print(f'Será necessário {paint_liters_needed}L de tinta para pintar essa parede.')
+print('-' * 40)
+print(f'* Dimensões da parede: {width}m x {height}')
+print(f'* Área da parede: {wall_area}m²')
+print(f'* Litros de tinta necessários: {paint_liters_needed}L')
+print('-' * 40)
