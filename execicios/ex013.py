@@ -4,9 +4,11 @@
 
 # Resolução
 
-print('Promoção Salarial (+15%)')
+print('Reajuste Salarial')
 
-wage = float(input('Digite seu salario: '))
+print('Info: aumento de 15% no salário')
+
+wage = float(input('Digite seu salario R$: '))
 
 increase_percentage = 15 / 100
 
@@ -14,5 +16,8 @@ increase_value = round(wage * increase_percentage, 2)
 
 final_wage = round(wage + increase_value, 2)
 
+print('-' * 40)
+print(f'Salário antigo: R$ {wage}')
 print(f'Valor de aumento: R$ {increase_value}')
-print(f'Salário final: R$ {final_wage}')
+print(f'Salário novo: R$ {final_wage}')
+print('-' * 40)
