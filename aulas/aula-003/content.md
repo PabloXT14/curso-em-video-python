@@ -5,3 +5,9 @@
 - Link da documentação oficial para instalar o Python e IDLE:
     - https://www.python.org/downloads/
 - Para mais detalhes veja a aula.
+- Se já quiser pode ir vendo sobre os seguintes assuntos de gerenciador de pacotes e ambiente virtual
+    - Gerenciador de Pacote `pip`:
+        - Link: https://www.youtube.com/watch?v=r29uzZpIlWI
+    - Ambientes Virtuais em Python:
+        - Link para VSCode: https://www.youtube.com/watch?v=lTN92QCUnC0
+        - Link para outros editores de texto comum de Python: https://www.youtube.com/watch?v=stEvUVvYD00
