@@ -10,6 +10,7 @@ print('Catetos e Hipotenusa')
 cat_adj = float(input('Digite o valor do cateto adjacente: '))
 cat_opo = float(input('Digite o valor do cateto oposto: '))
 
+# Fórmula: hip² = cat² + cat² 
 hip = math.sqrt(math.pow(cat_adj, 2) + math.pow(cat_opo, 2))
 
 print('-' * 20)
