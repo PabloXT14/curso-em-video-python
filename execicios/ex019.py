@@ -3,7 +3,7 @@
 # Descrição: Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome deles e escrevendo o nome do escolhido. 
 
 # Resolução
-import random
+from random import choice
 
 print('Sorteando um item na lista')
 
@@ -19,7 +19,7 @@ while True:
 
     students.append(current_name)
 
-chosen_student = random.choice(students)
+chosen_student = choice(students)
 
-print(f'Aluno sorteado: {chosen_student}')
 print('-' * 40)
+print(f'Aluno sorteado: {chosen_student}')
