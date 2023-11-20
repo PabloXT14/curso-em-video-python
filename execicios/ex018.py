@@ -3,17 +3,19 @@
 # Descrição: Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo. 
 
 # Resolução
-import math
+from math import sin, cos, tan, radians
 
 print('Seno, Cosseno e Tangente')
 
+print('-' * 40)
+
 angle = float(input('Digite o valor de um ângulo: '))
 
-angle_radians = math.radians(angle)
+angle_radians = radians(angle)
 
-angle_sin = round(math.sin(angle_radians), 2)
-angle_cos = round(math.cos(angle_radians), 2)
-angle_tan = round(math.tan(angle_radians), 2)
+angle_sin = round(sin(angle_radians), 2)
+angle_cos = round(cos(angle_radians), 2)
+angle_tan = round(tan(angle_radians), 2)
 
 print('-' * 40)
 print(f'Seno de {angle}° = {angle_sin}')
