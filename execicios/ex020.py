@@ -4,7 +4,7 @@
 
 # Resolução
 
-import random
+from random import sample, shuffle
 
 print('Sorteando uma ordem na lista')
 
@@ -20,9 +20,9 @@ while True:
 
     students.append(current_name)
 
-# 1ª Solução (melhor opção) 
+# 1ª Solução
 
-students_reorganized = random.sample(students, len(students)) # Cria uma nova lista reorganizada
+students_reorganized = sample(students, len(students)) # Cria uma nova lista reorganizada de forma aleatória
 
 print('-' * 80)
 
@@ -34,13 +34,15 @@ for index, student in enumerate(students_reorganized):
 print('-' * 80)
 
 # 2ª Solução
-# random.shuffle(students) # Reorganiza a lista de forma aleatória
+'''
+shuffle(students) # Reorganiza uma lista já existente de forma aleatória
 
-# print('-' * 80)
+print('-' * 80)
 
-# print('Ordem de apresentação:')
+print('Ordem de apresentação:')
 
-# for index, student in enumerate(students):
-#     print(f'{index + 1}º {student}')
+for index, student in enumerate(students):
+    print(f'{index + 1}º {student}')
 
-# print('-' * 80)
+print('-' * 80)
+'''
