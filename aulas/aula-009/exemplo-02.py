@@ -16,6 +16,6 @@ print(f"- Contando quantas vezes o caracter 'o' aparece em uma parte especifica 
 
 print(f"- A partir de qual indice encontrou o texto 'deo': {phrase.find('deo')}")
 
-print(f"- Tentando encontrar texto inexistente ('Android') na frase: {phrase.find('Android')}")
+print(f"- Tentando encontrar texto inexistente ('Android') na frase: {phrase.find('Android')}") # return -1
 
 print(f"- Existe o texto 'Curso' na frase: {'Curso' in phrase}")
