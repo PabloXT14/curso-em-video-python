@@ -31,10 +31,10 @@ print('-' * 80)
 str_number = str(number)
 number_digits_amount = len(str_number)
 
-unit = str_number[number_digits_amount - 1]
-ten = str_number[number_digits_amount - 2] if (number_digits_amount >= 2) else 'sem dezenas'
-hundred = str_number[number_digits_amount - 3] if (number_digits_amount >= 3) else 'sem centenas'
-thousands = str_number[number_digits_amount - 4] if (number_digits_amount == 4) else 'sem milhar'
+unit = number % 10
+ten = (number // 10) % 10
+hundred = (number // 100) % 10
+thousands = (number // 1000) % 10
 
 print(f'- Unidade: {unit}')
 print(f'- Dezena: {ten}')
