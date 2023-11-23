@@ -9,12 +9,13 @@
 '''
 
 # Resolução:
+import time
 
 print('Analisador de Textos')
 
 print('-' * 80)
 
-full_name = input('Digite seu nome completo: ')
+full_name = str(input('Digite seu nome completo: ')).strip()
 
 print('-' * 80)
 
