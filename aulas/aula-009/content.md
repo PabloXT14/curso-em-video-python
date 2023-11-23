@@ -78,7 +78,7 @@ print(title_case)  # Retorna 'Curso Em Vídeo'
 
 ## Junção e Divisão:
 
-- `join()`: Junta os elementos de uma sequência usando uma string como separador.
+- `join()`: Junta os elementos de uma sequência/array usando uma string como separador.
 ```py
 words = ['Curso', 'em', 'Vídeo']
 joined_phrase = ' '.join(words)
