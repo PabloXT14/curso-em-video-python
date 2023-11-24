@@ -10,13 +10,22 @@ print('Verificando as primeiras letras de um texto')
 
 print('-' * 80)
 
-city_name = input('Digite o nome de uma cidade: ')
+city_name = str(input('Digite o nome de uma cidade: ')).strip().lower()
 
 print('-' * 80)
 
-city_name = city_name.lower()
-
+# 1ª Solução
 if (city_name.startswith('santo')):
     print("O nome da cidade começa com 'SANTO'.")
 else:
     print("O nome da cidade não começa com 'SANTO'.")
+
+# 2ª Solução
+'''
+city_name_starts_with_santo = city_name[:5] == 'santo'
+
+if (city_name_starts_with_santo):
+    print("O nome da cidade começa com 'SANTO'.")
+else:
+    print("O nome da cidade não começa com 'SANTO'.")
+'''
