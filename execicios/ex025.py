@@ -10,15 +10,13 @@ print('Procurando uma string dentro de outra')
 
 print('-' * 80)
 
-name = input('Digite seu nome: ')
+name = str(input('Digite seu nome: ')).strip().lower()
 
 print('-' * 80)
 
-name = name.lower()
+name_has_silva = 'silva' in name
 
-has_silva = 'silva' in name
-
-if (has_silva):
+if (name_has_silva):
     print("Essa pessoa tem 'SILVA' no nome.")
 else:
     print("Essa pessoa não tem 'SILVA' no nome.")
