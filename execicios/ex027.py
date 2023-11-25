@@ -13,11 +13,12 @@ print('Primeiro e último nome de uma pessoa')
 
 print('-' * 80)
 
-name = input('Digite seu nome: ')
+name = str(input('Digite seu nome: ')).strip()
+
 
 print('-' * 80)
 
-names_array = name.strip().split(' ')
+names_array = name.split(' ')
 
 first_name = names_array[0]
 last_name = names_array[len(names_array) - 1] # ou somente -1 pois referencia o primeiro item de um array de tras para a frente
