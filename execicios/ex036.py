@@ -54,4 +54,5 @@ if is_installment_approved:
     print(f'* Valor da prestação mensal: {styles["bold"] + colors["yellow"]}R$ {monthly_payment:.2f}{styles["reset"]}')
 else:
     print(f'{styles["bold"] + colors["red"]}* EMPRÉSTIMO NEGADO!{styles["reset"]}')
+    print(f'* Valor da prestação mensal: {styles["bold"] + colors["yellow"]}R$ {monthly_payment:.2f}{styles["reset"]}')
     print(f'{styles["bold"] + colors["yellow"]}* Valor da prestação excede 30% do salário.{styles["reset"]}')
