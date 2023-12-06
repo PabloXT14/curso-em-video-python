@@ -9,6 +9,7 @@ Crie um programa que faça o computador jogar Jokenpô com você.
 # Resolução:
 
 from random import choice
+from time import sleep
 
 print('# GAME: Pedra, Papel e Tesoura')
 
@@ -31,8 +32,12 @@ while True:
 
     print('-' * 70)
 
-    if (player_choice == 1) or (player_choice == 2) or (player_choice == 3):
+    if  1 <= player_choice <= 3:
         break
+    else:
+        print('Escolha inválida. Por favor escolha uma das opções disponíveis')
+    
+    print('-' * 70)
 
 # Converter a escolha do jogador em texto
 choose_player_text = ''
@@ -45,6 +50,14 @@ elif (player_choice == 3):
     choose_player_text = computer_options[2]
 else:
     choose_player_text = 'Escolha inválida'
+
+print('JO')
+sleep(1)
+print('KEN')
+sleep(1)
+print('PO!!!')
+
+print('-' * 70)
 
 # Exibindo escolhas
 print(f'* Você escolher: {choose_player_text}')
