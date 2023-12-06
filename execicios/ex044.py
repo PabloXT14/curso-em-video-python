@@ -17,7 +17,7 @@ print('# Gerenciador de Pagamentos')
 
 print('-' * 70)
 
-product_price = float(input('Digite o valor do produto (em R$): '))
+purchase_price = float(input('Digite o valor das compras (em R$): '))
 
 print('-' * 70)
 
@@ -33,18 +33,34 @@ while True:
 
     print('-' * 70)
 
-    if (payment_option == 1) or (payment_option == 2) or (payment_option == 3) or (payment_option == 4):
+    if 1 <= payment_option <= 4:
         break
+    else:
+        print('Escolha inválida. Por favor digite uma das escolhas disponíveis.')
 
-final_product_price = product_price
+    print('-' * 70)
+
+final_purchase_price = purchase_price
+number_of_parcels = 0
 
 if (payment_option == 1):
-    final_product_price = product_price - (product_price * 0.1)
+    final_purchase_price = purchase_price - (purchase_price * 0.1)
 elif (payment_option == 2):
-    final_product_price = product_price - (product_price * 0.05)
+    final_purchase_price = purchase_price - (purchase_price * 0.05)
 elif (payment_option == 3):
-    final_product_price = product_price
-else:
-    final_product_price = product_price + (product_price * 0.2)
+    number_of_parcels = 2
+    final_purchase_price = purchase_price
+    monthly_parcel = final_purchase_price / number_of_parcels
 
-print(f'* Valor final do produto: {'\033[1;33m'}R$ {final_product_price:.2f}{'\033[m'}')
+    print(f'* Sua compra será parcelada em {'\033[1;33m'}{number_of_parcels}x de R$ {monthly_parcel:.2f} (sem juros){'\033[m'}')
+elif (payment_option == 4):
+    number_of_parcels = int(input('Quantas parcelas: '))
+
+    print('-' * 70)
+
+    final_purchase_price = purchase_price + (purchase_price * 0.2)
+    monthly_parcel = final_purchase_price / number_of_parcels
+
+    print(f'* Sua compra será parcelada em {'\033[1;33m'}{number_of_parcels}x de R$ {monthly_parcel:.2f} (com juros){'\033[m'}')
+
+print(f'* Valor final das compras: {'\033[1;33m'}R$ {final_purchase_price:.2f}{'\033[m'}')
