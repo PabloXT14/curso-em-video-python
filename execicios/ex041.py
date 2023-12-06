@@ -8,8 +8,8 @@ A Confederação Nacional de Natação precisa de um programa que leia o ano de 
 - Até 9 anos: MIRIN
 - Até 14 anos: INFANTIL
 - Até 19 anos: JUNIOR
-- Até 20 anos: SÉNIOR
-- Acima: MASTER
+- Até 25 anos: SÊNIOR
+- Acima 25 anos: MASTER
 '''
 
 # Resolução:
@@ -36,9 +36,10 @@ elif (user_age <= 14):
     user_category = 'INFANTIL'
 elif (user_age <= 19):
     user_category = 'JUNIOR'
-elif (user_age <= 20):
-    user_category = 'SÉNIOR'
+elif (user_age <= 25):
+    user_category = 'SÊNIOR'
 else:
     user_category = 'MASTER'
 
-print(f'* A categoria do atleta é: {'\033[1;33m'}{user_category}{'\033[m'}')
+print(f'* Idade do atleta: {'\033[1;33m'}{user_age}{'\033[m'}')
+print(f'* Categoria do atleta: {'\033[1;33m'}{user_category}{'\033[m'}')
