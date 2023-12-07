@@ -1,6 +1,10 @@
-# # Exercício 6 (Aula 007)
+# Exercício 6 - Dobro, Triplo, Raiz Quadrada (Aula 007)
 
-# Crie um algoritmo que leia um número e mostre o seu dobro, triplo e raiz quadrada. 
+'''
+# Descrição:
+
+Crie um algoritmo que leia um número e mostre o seu dobro, triplo e raiz quadrada. 
+'''
 
 # Resolução
 

@@ -1,11 +1,15 @@
-# Exercício 18 (Aula 008)
+# Exercício 18 - Seno, Cosseno e Tangente (Aula 008)
 
-# Descrição: Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo. 
+'''
+# Descrição:
+
+Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.
+'''
 
 # Resolução
 from math import sin, cos, tan, radians
 
-print('Seno, Cosseno e Tangente')
+print('# Seno, Cosseno e Tangente')
 
 print('-' * 40)
 

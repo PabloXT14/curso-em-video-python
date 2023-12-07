@@ -1,12 +1,16 @@
-# Exercício 20 (Aula 008)
+# Exercício 20 - Sorteando uma ordem na lista (Aula 008)
 
-# Descrição: O mesmo professor do desafio anterior quer sortear a ordem de apresentação de trabalho dos alunos Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada. 
+'''
+# Descrição:
+
+O mesmo professor do desafio anterior quer sortear a ordem de apresentação de trabalho dos alunos Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.
+'''
 
 # Resolução
 
 from random import sample, shuffle
 
-print('Sorteando uma ordem na lista')
+print('# Sorteando uma ordem na lista')
 
 print('-' * 80)
 

@@ -1,10 +1,14 @@
-# Exercício 15 (Aula 007)
+# Exercício 15 - Aluguel de Carros (Aula 007)
 
-# Escreva um programa que pergunte a quantidade de Km percorridos por um carro alugado e a quantidade de dias pelos quais ele foi alugado. Calcule o preço a pagar, sabendo que o carro custa R$60 por dia e R$0,15 por Km rodado.
+'''
+# Descrição:
+
+Escreva um programa que pergunte a quantidade de Km percorridos por um carro alugado e a quantidade de dias pelos quais ele foi alugado. Calcule o preço a pagar, sabendo que o carro custa R$60 por dia e R$0,15 por Km rodado.
+'''
 
 # Resolução
 
-print('Aluguel de Carros')
+print('# Aluguel de Carros')
 
 price_per_distance_traveled_in_real = 0.15
 price_per_rented_day_in_real = 60

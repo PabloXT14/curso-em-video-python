@@ -1,6 +1,10 @@
-# Exercício 14 (Aula 007)
+# Exercício 14 - Conversor de Temperaturas (Aula 007)
 
-# Escreva um programa que converta uma temperatura digitando em graus Celsius e converta para graus Fahrenheit.
+'''
+# Descrição:
+
+Escreva um programa que converta uma temperatura digitando em graus Celsius e converta para graus Fahrenheit.
+'''
 
 # Resolução
 

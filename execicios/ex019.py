@@ -1,11 +1,15 @@
-# Exercício 19 (Aula 008)
+# Exercício 19 - Sorteando um item na lista (Aula 008)
 
-# Descrição: Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome deles e escrevendo o nome do escolhido. 
+'''
+# Descrição:
+
+Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome deles e escrevendo o nome do escolhido. 
+'''
 
 # Resolução
 from random import choice
 
-print('Sorteando um item na lista')
+print('# Sorteando um item na lista')
 
 print('-' * 40)
 

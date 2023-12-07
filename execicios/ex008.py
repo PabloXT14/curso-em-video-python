@@ -1,10 +1,14 @@
-# Exercício 8 (Aula 007)
+# Exercício 8 - Conversor de Medidas (Aula 007)
 
-# Escreva um programa que leia um valor em metros e o exiba convertido em centimetros e milímetros (e se quiser converta para as outras unidades de medidas de distâncias mais comuns).
+'''
+# Descrição:
+
+Escreva um programa que leia um valor em metros e o exiba convertido em centimetros e milímetros (e se quiser converta para as outras unidades de medidas de distâncias mais comuns).
+'''
 
 # Resolução
 
-print('Conversor de metros em centímetros e milímetros')
+print('# Conversor de metros em centímetros e milímetros')
 
 meters_value = round(float(input('Digite um valor em metros: '))) # round() sem um segundo parâmetro faz com que o valor passado não tenha casas depois da virgula
 

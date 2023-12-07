@@ -1,11 +1,15 @@
-# Exercício 17 (Aula 008)
+# Exercício 17 - Catetos e Hipotenusa (Aula 008)
 
-# Descrição: Faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa. 
+'''
+# Descrição:
+
+Faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa.
+'''
 
 # Resolução
 import math
 
-print('Catetos e Hipotenusa')
+print('# Catetos e Hipotenusa')
 
 print('-' * 40)
 

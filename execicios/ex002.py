@@ -1,6 +1,10 @@
-# Exercício 02 (Aula 004)
+# Exercício 02 - Respondendo ao Usuário (Aula 004)
 
-# Faça um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas.
+'''
+# Descrição:
+
+Faça um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas.
+'''
 
 # Resolução
 

@@ -1,6 +1,10 @@
-# Exercício 5 (Aula 007)
+# Exercício 5 - Antecessor e Sucessor (Aula 007)
 
-# Faça um programa que leia um número inteiro e mostre na tela o seu sucessor e seu antecessor. 
+'''
+# Descrição:
+
+Faça um programa que leia um número inteiro e mostre na tela o seu sucessor e seu antecessor. 
+'''
 
 # Resolução
 

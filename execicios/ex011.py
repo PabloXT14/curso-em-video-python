@@ -1,10 +1,14 @@
-# Exercício 11 (Aula 007)
+# Exercício 11 - Pintando Parede (Aula 007)
 
-# Faça um programa que leia a altura e largura de uma parede em metros, calcule sua área e quantidade de tinta necessária para pintá-lo, sabendo que cada litro de tinta, pinta uma área de 2m².
+'''
+# Descrição:
+
+Faça um programa que leia a altura e largura de uma parede em metros, calcule sua área e quantidade de tinta necessária para pintá-lo, sabendo que cada litro de tinta, pinta uma área de 2m².
+'''
 
 # Resolução
 
-print('Pintando Parede')
+print('# Pintando Parede')
 
 print('Info: 1L da nossa tinta pinta 2m²')
 

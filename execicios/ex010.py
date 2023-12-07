@@ -1,11 +1,15 @@
-# Exercício 10 (Aula 007)
+# Exercício 10 - Conversor de Moedas (Aula 007)
 
-# Crie um programa que leia quanto dinheiro uma pessoa tem na carteira e mostre quantos dólares ela pode comprar.
-# Considere: US$1,00 = R$3,27 
+'''
+# Descrição:
+
+Crie um programa que leia quanto dinheiro uma pessoa tem na carteira e mostre quantos dólares ela pode comprar.
+Considere: US$1,00 = R$3,27 
+'''
 
 # Resolução
 
-print('Conversão Real -> Dólar | Euro | Iene')
+print('# Conversão Real -> Dólar | Euro | Iene')
 
 real_money = float(input('Digite quantos reais você tem na carteira, R$'))
 

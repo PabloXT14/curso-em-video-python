@@ -1,10 +1,14 @@
-# Exercício 12 (Aula 007)
+# Exercício 12 - Calculando Descontos (Aula 007)
 
-# Faça um algoritmo que leia o preço de um produto e mostre seu novo preço, com 5% de desconto.
+'''
+# Descrição:
+
+Faça um algoritmo que leia o preço de um produto e mostre seu novo preço, com 5% de desconto.
+'''
 
 # Resolução
 
-print('Calculando Desconto')
+print('# Calculando Desconto')
 
 print('Info: produtos com 5% off')
 

@@ -1,6 +1,12 @@
-# Exercício 01 (Aula 004)
+# Exercício 01 - Deixando tudo pronto (Aula 004)
 
-# Crie um programa que escreva "Olá, Mundo/Hello World" na tela.
+'''
+# Descrição:
+
+Crie um programa que escreva "Olá, Mundo/Hello World" na tela.
+'''
+
+# 
 
 # Resolução
 

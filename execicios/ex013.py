@@ -1,10 +1,14 @@
-# Exercício 13 (Aula 007)
+# Exercício 13 - Reajuste Salarial (Aula 007)
 
-# Faça um algoritmo que leia o salário de um funcionário e mostre seu novo salário, com 15% de aumento.
+'''
+# Descrição:
+
+Faça um algoritmo que leia o salário de um funcionário e mostre seu novo salário, com 15% de aumento.
+'''
 
 # Resolução
 
-print('Reajuste Salarial')
+print('# Reajuste Salarial')
 
 print('Info: aumento de 15% no salário')
 

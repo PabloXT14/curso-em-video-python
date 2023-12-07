@@ -1,12 +1,18 @@
-# Exercício 16 (Aula 008)
+# Exercício 16 - Quebrando um número (Aula 008)
 
-# Descrição: Crie um programa que leia um número real qualquer pelo teclado e mostre na tela a sua porção inteira.
-# Ex: Digite um número: 6.127 -> O número 6.127 tem a parte inteira 6. 
+'''
+# Descrição:
+
+Crie um programa que leia um número real qualquer pelo teclado e mostre na tela a sua porção inteira.
+Ex:
+
+Digite um número: 6.127 -> O número 6.127 tem a parte inteira 6. 
+'''
 
 # Resolução
 import math
 
-print('Quebrando um número')
+print('# Quebrando um número')
 
 number = float(input('Digite um número inteiro qualquer: '))
 

@@ -1,6 +1,10 @@
-# Exercício 03 (Aula 004)
+# Exercício 03 - Somando dois números (Aula 004)
 
-# Crie um programa que leia dois número e mostre a soma entre eles.
+'''
+# Descrição:
+
+Crie um programa que leia dois número e mostre a soma entre eles.
+'''
 
 # Resolução
 

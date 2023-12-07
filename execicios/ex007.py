@@ -1,6 +1,10 @@
-# Exercício 7 (Aula 007)
+# Exercício 7 - Média Aritmética (Aula 007)
 
-# Desenvolva um programa que leia as duas notas de um aluno, calcule e mostre a sua média
+'''
+# Descrição:
+
+Desenvolva um programa que leia as duas notas de um aluno, calcule e mostre a sua média.
+'''
 
 # Resolução
 

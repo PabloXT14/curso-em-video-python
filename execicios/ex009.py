@@ -1,6 +1,10 @@
-# Exercício 9 (Aula 007)
+# Exercício 9 - Tabuada v1.0 (Aula 007)
 
-# Faça um programa que leia um número inteiro qualquer e mostre na tela a sua tabuada.
+'''
+# Descrição:
+
+Faça um programa que leia um número inteiro qualquer e mostre na tela a sua tabuada.
+'''
 
 # Resolução
 

@@ -1,6 +1,10 @@
-# Exercício 21 (Aula 008)
+# Exercício 21 - Tocando um MP3 (Aula 008)
 
-# Descrição: Faça um programa em Python que abra e reproduza o áudio de um arquivo MP3. 
+'''
+# Descrição:
+
+Faça um programa em Python que abra e reproduza o áudio de um arquivo MP3.
+''' 
 
 # Resolução
 import os
@@ -9,7 +13,7 @@ import pygame
 import time
 import keyboard as kb
 
-print('Tocando um MP3')
+print('# Tocando um MP3')
 
 print('-' * 40)
 
