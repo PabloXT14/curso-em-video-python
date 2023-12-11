@@ -12,19 +12,24 @@ print('# Soma ímpares múltiplos de 3')
 
 print('-' * 70)
 
-start_range = 1
+start_range = 3
 end_range = 501
 
 total_odd_sum = 0
+count_odds = 0
+
 numbers_per_line = 10
 numbers_in_line = 0
 
 print('* Números:')
 
-for number in range(start_range, end_range):
-    if (number % 2 != 0) and (number % 3 == 0):
+# Pulando de 3 em 3 para ter mais performance
+for number in range(start_range, end_range, 3):
+    if (number % 2 != 0):
         print(f'{number:3}', end=" ")
+        
         total_odd_sum += number
+        count_odds += 1
         numbers_in_line += 1
 
         # Quebra de linha
@@ -35,4 +40,5 @@ for number in range(start_range, end_range):
 print()
 print('-' * 70)
 
+print(f'* Quantidade de números: {'\033[1;33m'}{count_odds}{'\033[m'}')
 print(f'* Soma total dos números: {'\033[1;33m'}{total_odd_sum}{'\033[m'}')
