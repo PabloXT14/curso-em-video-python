@@ -22,14 +22,19 @@ oldest_man_name = ''
 oldest_man_age = 0
 count_women_under_20 = 0
 
+phrase = 'Pablo Alan'
+
+print(phrase.strip(' '))
+
+
 print('-' * 70)
 
 for i in range(0, people_amount):
     print(f'* Digite os dados da pessoa {i + 1}:')
 
-    person_name = str(input('Nome: '))
+    person_name = str(input('Nome: ')).strip().capitalize()
     person_age = int(input('Idade: '))
-    person_gender = str(input('Sexo (M/F): ')).upper()
+    person_gender = str(input('Sexo (M/F): ')).strip().upper()
 
     # Atualiza a soma das idades
     ages_sum += person_age
@@ -37,7 +42,7 @@ for i in range(0, people_amount):
     # Verifica se é um homem e se é o mais avelho até agora
     if (person_gender == 'M' and person_age > oldest_man_age):
         oldest_man_age = person_age
-        oldest_man_name = person_name.capitalize()
+        oldest_man_name = person_name
     
     # Verifica se é mulher com menos de 20 anos
     if (person_gender == 'F' and person_age < 20):
