@@ -15,7 +15,7 @@ print('# Contagem Regressiva')
 print('-' * 70)
 
 start_range = 10
-end_range = 0
+end_range = -1
 
 for time in range(start_range, end_range, -1):
     print(time)
