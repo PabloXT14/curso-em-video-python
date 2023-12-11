@@ -44,7 +44,10 @@ else:
 
 # 2ª Solução
 
-is_palindrome = phrase_without_space == phrase_without_space[::-1] # o -1 neste caso indica indo de de 1 em 1 começam do fim da phrase
+is_palindrome = phrase_without_space == phrase_without_space[::-1] # o -1 neste caso indica que vai de de 1 em 1 caracter começam do fim da phrase
+
+print(f'* Frase digitada (sem espaços): {phrase_without_space}')
+print(f'* Inverso da frase (sem espaços): {phrase_without_space[::-1]}')
 
 if (is_palindrome):
     print(f'{'\033[1;32m'}* A frase é um palíndromo. {'\033[m'}')
