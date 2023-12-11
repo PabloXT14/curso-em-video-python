@@ -15,16 +15,19 @@ print('-' * 70)
 # 1ª Solução:
 
 even_sum = 0
+count_even = 0
 
 for i in range(6):
-    current_number = int(input('Digite um número inteiro: '))
+    current_number = int(input(f'Digite o {i + 1}º valor inteiro: '))
 
     if (current_number % 2 == 0):
         even_sum += current_number
+        count_even += 1
     
     print('-' * 70)
 
-print(f'Soma dos pares: {'\033[1;33m'}{even_sum}{'\033[m'}')
+print(f'* Quantidade de números pares: {'\033[1;33m'}{count_even}{'\033[m'}')
+print(f'* Soma dos pares: {'\033[1;33m'}{even_sum}{'\033[m'}')
 
 # 2ª Solução
 '''
