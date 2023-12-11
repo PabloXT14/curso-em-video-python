@@ -19,6 +19,16 @@ print('-' * 70)
 for i in range(0, people_amount):
     person_weight = float(input(f'Digite o peso da pessoa {i + 1} (kg): '))
 
+    # Alternativa caso não tenha 'inf' na linguagem de programação que estiver utilizando
+    '''
+        # Inicialize (fora do loop for) as variáveis 'lower_weight' e 'higher_weight' com o valor 0
+
+        # Agora (dentro do loop for) defina os valores iniciais das variáveis citas como sendo o primeiro peso digite (pois estes são os maior e menor pesos em um primeiro momento) 
+        if (i == 0):
+            lower_weight = person_weight
+            higher_weight = person_weight
+    ''' 
+
     if (person_weight > higher_weight):
         higher_weight = person_weight
     
