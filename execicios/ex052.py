@@ -31,11 +31,43 @@ Assim, se não encontrarmos divisores até a raiz quadrada de N, não encontrare
 A adição de `+1` no final do intervalo é para garantir que a função `range` inclua a raiz quadrada de N. A função `range` gera números até, mas não incluindo, o valor final. Portanto, ao adicionar 1 à raiz quadrada, garantimos que ela também será incluída no intervalo de verificação.
 '''
 
+# 1ª Solução (mais performance)
+
+if (number < 2): # pois o número 1 não é primo
+    is_prime_number = False
+
 for i in range(2, int(number ** 0.5) + 1):
+    print('.')
     if (number % i == 0):
         is_prime_number = False
+        break
 
 if (is_prime_number):
     print(f'* O número {'\033[1;33m'}{number}{'\033[m'} é primo!')
 else:
     print(f'* O número {'\033[1;33m'}{number}{'\033[m'} não é primo!')
+
+
+# 2ª Solução
+
+# print('* Números em verde: divisível')
+# print('* Números em vermelho: não divisível')
+
+# total_divisible = 0
+
+# for i in range(1, number + 1):
+#     if (number % i == 0):
+#         print(f'{'\033[1;32m'}{i}{'\033[m'}', end=' ')
+#         total_divisible += 1
+#     else:
+#         print(f'{'\033[1;31m'}{i}{'\033[m'}', end=' ')
+
+# print()
+# print('-' * 70)
+
+# print(f'* O número {'\033[1;33m'}{number}{'\033[m'} foi divisível {'\033[1;33m'}{total_divisible}{'\033[m'} vezes.')
+
+# if (total_divisible == 2):
+#     print(f'* E por isso ele {'\033[1;33m'}É PRIMO{'\033[m'}')
+# else:
+#     print(f'* E por isso ele {'\033[1;33m'}NÃO É PRIMO{'\033[m'}')
