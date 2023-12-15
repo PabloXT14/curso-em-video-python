@@ -11,18 +11,17 @@ Ex:
 
 # Resolução:
 
-# Fórmula de Fibonacci: Fn = F(n-1) + F(n-2) onde F1 = 1 e F2 = 1
+# Fórmula de Fibonacci: Fn = F(n-1) + F(n-2) onde F1 = 0 e F2 = 1
 
 print('# Sequência de Fibonacci v1.0')
 
 print('-' * 70)
 
-terms_amount = int(input('Digite um número inteiro: '))
+terms_amount = int(input('Digite quantos termos você quer mostrar: '))
 
 print('-' * 70)
 
 # 1ª Solução
-'''
 count_term = 1
 current_term = 0
 
@@ -41,21 +40,33 @@ while count_term <= terms_amount:
         current_term = new_term_value
 
     # Lógica para apresentar termos em linha
-    if (count_term == terms_amount):
-        print(current_term)
-    else:
-        print(f'{current_term}', end=' - ')
+    print(current_term, end='')
+    print(' - ' if count_term < terms_amount else '', end='')
 
     count_term += 1
 
-print()
-'''
+# Lógica quebra de linha e mensagem de alerta
+if (terms_amount < 0):
+    print(f'{'\033[1;33m'}* Por favor, digite um número inteiro positivo.{'\033[m'}')
+elif (terms_amount >= 0):
+    print()
+
+print('-' * 70)
 
 # 2ª Solução
-
+'''
 # Inicialização dos primeiros termos da Sequência de Fibonacci
 fibonacci = [0, 1]
-print(f'{fibonacci[0]} - {fibonacci[1]}', end=' - ')
+if (terms_amount > 2):
+    print(f'{fibonacci[0]} - {fibonacci[1]}', end=' - ')
+elif (terms_amount == 2):
+    print(f'{fibonacci[0]} - {fibonacci[1]}')
+elif (terms_amount == 1):
+    print(fibonacci[0])
+elif (terms_amount == 0):
+    print()
+else:
+    print(f'{'\033[1;33m'}* Por favor, digite um número inteiro positivo.{'\033[m'}')
 
 # Loop para gerar e mostrar os n primeiros termos
 i = 2
@@ -71,4 +82,5 @@ while i < terms_amount:
         print(new_term)
 
 # Fazendo uma quebra de linha no final para outros prints
-print()
+print('-' * 70)
+'''
