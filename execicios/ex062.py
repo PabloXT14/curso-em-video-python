@@ -38,8 +38,9 @@ while more_terms:
 
         if (answer > 0):
             terms_amount += answer
-            print('-' * 70)
         else:
             more_terms = False
+        
+        print('-' * 70)
 
 print(f'* Total de termos mostrados: {'\033[1;33m'}{terms_amount}{'\033[m'}')
