@@ -24,8 +24,10 @@ user_guess = end_range + 1
 count_guesses = 0
 user_guessed_right = False
 
+print('Estou pensando em um número...')
+
 while not user_guessed_right:
-    user_guess = int(input(f'Estou pensando em um número entre {start_range} e {end_range}, tente adivinhar qual é: '))
+    user_guess = int(input(f'Digite seu palpite (entre {start_range} e {end_range}): '))
 
     count_guesses += 1
 
@@ -36,9 +38,13 @@ while not user_guessed_right:
 
     print('-' * 70)
 
-    if (user_guess != computer_number):
-        print(f'{'\033[1;31m'}* Que pena! Este não foi o número sorteado, tente outra vez.{'\033[m'}')
+    if (user_guess < computer_number):
+        print(f'{'\033[1;31m'}* O número sorteado é maior que esse, tente outra vez.{'\033[m'}')
     
+        print('-' * 70)
+    elif (user_guess > computer_number):
+        print(f'{'\033[1;31m'}* O número sorteado é menor que esse, tente outra vez.{'\033[m'}')
+
         print('-' * 70)
     else:
         user_guessed_right = True
