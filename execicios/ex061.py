@@ -24,10 +24,10 @@ count = 1
 terms_amount = 10
 
 while count <= terms_amount:
-    if (count < terms_amount):
-        print(f'{current_term}', end=' - ')
-    else:
-        print(f'{current_term}')
+    print(f'{current_term}', end='')
+    print(' - ' if count < terms_amount else '', end='')
 
     current_term += ratio
     count += 1
+
+print() # Quebre de linha para as próximas impressos no terminal
