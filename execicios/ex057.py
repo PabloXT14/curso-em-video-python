@@ -12,12 +12,12 @@ print('# Validação de Dados')
 
 print('-' * 70)
 
-answer = ''
+answer = str(input('Digite o seu sexo (M/F): ')).strip().upper()
 
 while answer != 'M' and answer != 'F':
-    answer = str(input('Digite o seu sexo (M/F): ')).strip().upper()
+    answer = str(input("Entrada inválida. Por favor, digite 'M' ou 'F': ")).strip().upper()
 
 print('-' * 70)
 
-print(f'* Sexo digitado: {answer}')
+print(f'* Sexo digitado: {'\033[1;33m'}{answer}{'\033[m'}')
 print('* Muito abrigado e tenha um ótimo dia!')
