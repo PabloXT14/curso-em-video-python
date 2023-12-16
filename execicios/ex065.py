@@ -26,8 +26,7 @@ while get_more_numbers == 'S':
     if (count_numbers == 1):
         higher_value = number
         lower_value = number
-    
-    if (number > higher_value):
+    elif (number > higher_value):
         higher_value = number
     elif (number < lower_value):
         lower_value = number
@@ -38,6 +37,7 @@ while get_more_numbers == 'S':
 
 average_values = total_sum / count_numbers
 
-print(f'* Média: {'\033[1;33m'}{average_values:.1f}{'\033[m'}')
+print(f'* Quantidade de números: {'\033[1;33m'}{count_numbers}{'\033[m'}')
+print(f'* Média: {'\033[1;33m'}{average_values:.2f}{'\033[m'}')
 print(f'* Maior valor: {'\033[1;33m'}{higher_value}{'\033[m'}')
 print(f'* Menor valor: {'\033[1;33m'}{lower_value}{'\033[m'}')
