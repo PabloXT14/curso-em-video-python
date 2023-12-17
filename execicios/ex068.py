@@ -9,6 +9,7 @@ Faça um programa que jogue par ou ímpar com o computador. O jogo só será int
 # Resolução:
 
 from random import randint
+from time import sleep
 
 print('# Jogo do Par ou Ímpar')
 
@@ -27,6 +28,10 @@ while True:
         if (player_choice == 'P' or player_choice == 'I'):
             break
 
+    print('-' * 70)
+
+    print('Carregando...')
+    sleep(1)
     print('-' * 70)
 
     computer_number = randint(1, 10)
