@@ -11,8 +11,9 @@ C) Qual é o nome do produto mais barato
 '''
 
 # Resolução:
+print('-' * 70)
 
-print(f'# MERCADINHO DO ZÉ')
+print(f'{' MERCADINHO DO ZÉ ':^70}')
 
 count_products = 0
 total_spent = 0
@@ -39,7 +40,7 @@ while True:
     if product_price > 1000:
         count_products_above_1000 += 1
     
-    if (product_price < cheapest_product_price) or (count_products == 1):
+    if (count_products == 1) or (product_price < cheapest_product_price):
         cheapest_product_price = product_price
         cheapest_product_name = product_name
 
@@ -57,4 +58,4 @@ print('-' * 70)
 print(f'* Quantidade de produtos comprados: {'\033[1;33m'}{count_products}{'\033[m'}')
 print(f'* Total gasto na compra: {'\033[1;33m'}R$ {total_spent:.2f}{'\033[m'}')
 print(f'* Quantidade de produtos acima de R$ 1000,00: {'\033[1;33m'}{count_products_above_1000}{'\033[m'}')
-print(f'* Produto mais barato: {'\033[1;33m'}{cheapest_product_name}{'\033[m'}')
+print(f'* Produto mais barato: {'\033[1;33m'}{cheapest_product_name} (R$ {cheapest_product_price:.2f}){'\033[m'}')
