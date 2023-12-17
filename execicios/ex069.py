@@ -33,7 +33,7 @@ while True:
     while True:
         gender = str(input('Sexo (M/F): ')).strip().upper()
 
-        if (gender == 'M' or gender == 'F'):
+        if (gender in 'MF'):
             break
 
     print('-' * 70)
