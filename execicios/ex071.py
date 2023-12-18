@@ -11,7 +11,7 @@ OBS: Considere que o caixa possui cédulas de R$ 50, R$ 20, R$ 10 e R$ 1
 # Resolução:
 print('=' * 70)
 
-print(f'{'BANCO CEV':^70}')
+print(f'{'BANCO DEV':^70}')
 
 print('=' * 70)
 
