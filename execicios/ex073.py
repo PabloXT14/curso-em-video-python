@@ -13,27 +13,38 @@ D) Em que posição na tabela está o time da Chapecoense/Vasco.
 
 # Resolução:
 
+import shutil 
+
 print('# Tuplas com Times de Futebol')
 
-print('-' * 100)
+terminal_size = shutil.get_terminal_size()
 
-brazilian_table = ('Palmeiras', 'Grêmio', 'Atlético-MG', 'Flamengo', 'Botafogo', 'Bragantino', 'Fluminense', 'Atlético-PR', 'Internacional', 'Fortaleza', 'São Paulo', 'Cuiabá', 'Corinthians', 'Cruzeiro', 'Vasco da Gama', 'Bahia', 'Santos', 'Goiás', 'Coritiba', 'América-MG')
+line_length = terminal_size.columns
+
+print('-' * line_length)
+
+teams = ('Palmeiras', 'Grêmio', 'Atlético-MG', 'Flamengo', 'Botafogo', 'Bragantino', 'Fluminense', 'Atlético-PR', 'Internacional', 'Fortaleza', 'São Paulo', 'Cuiabá', 'Corinthians', 'Cruzeiro', 'Vasco da Gama', 'Bahia', 'Santos', 'Goiás', 'Coritiba', 'América-MG')
+
+print('* Lista de times:')
+print(teams)
+
+print('-' * line_length)
 
 print('A) Os 5 primeiros colocados:')
-print(brazilian_table[:5])
+print(teams[:5])
 
-print('-' * 100)
+print('-' * line_length)
 
 print('B) Os últimos 4 colocados:')
-print(brazilian_table[-4:])
+print(teams[-4:])
 
-print('-' * 100)
+print('-' * line_length)
 
 print('C) Times em ordem alfabética:')
-print(sorted(brazilian_table))
+print(sorted(teams))
 
-print('-' * 100)
+print('-' * line_length)
 
 searched_team = 'Vasco da Gama'
-position = brazilian_table.index(searched_team) + 1
-print(f'D) O time da(o) {searched_team} está na posição {position} na tabela.')
+team_position = teams.index(searched_team) + 1
+print(f'D) O time do(a) {searched_team} está na {team_position}ª posição na tabela.')
