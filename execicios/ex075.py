@@ -37,7 +37,7 @@ numbers = tuple(
 )
 
 occurrences_9 = numbers.count(9)
-position_3 = numbers.index(3) + 1 if 3 in numbers else None
+position_3 = numbers.index(3) + 1 if 3 in numbers else 'nenhuma posição'
 
 print('-' * line_length)
 
