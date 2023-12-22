@@ -40,6 +40,6 @@ while True:
     if answer == 'N':
         break
 
-unique_numbers = sorted(unique_numbers)
+unique_numbers = unique_numbers.sort()
 
 print(f'* Valores digitados: {'\033[1;33m'}{unique_numbers}{'\033[m'}')
