@@ -47,4 +47,4 @@ numbers_list.sort(reverse=True) # Colocando lista em ordem decrescente
 
 print(f'A) Quantidade de números digitados: {'\033[1;33m'}{len(numbers_list)}{'\033[m'}')
 print(f'B) Lista em ordem decrescente: {'\033[1;33m'}{numbers_list}{'\033[m'}')
-print(f'C) O valor {number_searched} está na lista: {'\033[1;33m'}{'Sim' if number_searched in numbers_list else 'Não'}{'\033[m'}')
+print(f'C) O valor {number_searched} está na lista: {'\033[1;33m'}{f'Sim (posição {numbers_list.index(number_searched) + 1})' if number_searched in numbers_list else 'Não'}{'\033[m'}')
