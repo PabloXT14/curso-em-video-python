@@ -19,7 +19,7 @@ print('-' * line_length)
 numbers = []
 
 for i in range(0, 5):
-    number = float(input(f'Digite o {i + 1}º valor: '))
+    number = int(input(f'Digite o {i + 1}º valor: '))
 
     numbers.append(number)
 
@@ -27,9 +27,19 @@ print('-' * line_length)
 
 highest_value = max(numbers)
 lowest_value = min(numbers)
-highest_position = numbers.index(highest_value) + 1
-lowest_position = numbers.index(lowest_value) + 1
 
 print(f'* Lista de números: {'\033[1;33m'}{numbers}{'\033[m'}')
-print(f'* Maior valor: {'\033[1;33m'}{highest_value} (posição {highest_position}){'\033[m'}')
-print(f'* Menor valor: {'\033[1;33m'}{lowest_value} (posição {lowest_position}){'\033[m'}')
+
+print(f'* Maior valor digitado: {'\033[1;33m'}{highest_value}{'\033[m'}, nas posições: ', end='')
+for i, number in enumerate(numbers):
+    if number == highest_value:
+        print(f'{'\033[1;33m'}{i}{'\033[m'}', end=' | ')
+
+print() # Quebra de linha
+
+print(f'* Menor valor digitado: {'\033[1;33m'}{lowest_value}{'\033[m'}, nas posições: ', end='')
+for i, number in enumerate(numbers):
+    if number == lowest_value:
+        print(f'{'\033[1;33m'}{i}{'\033[m'}', end=' | ')
+
+print() # Quebra de linha
