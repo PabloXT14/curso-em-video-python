@@ -28,8 +28,7 @@ for char in math_expression:
         if '(' in parenthesis_list:
             parenthesis_list.pop() # Apaga a última abertura de parênteses registrada na lista para balancear com o parênteses de fechando que foi encontrado
         else:
-            continue
-        
+            parenthesis_list.append(char)
 
 is_expression_valid = len(parenthesis_list) == 0 # Se a lista "parenthesis_list" estiver vazia, os parênteses estão balanceados
 
