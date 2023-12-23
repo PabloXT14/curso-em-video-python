@@ -21,12 +21,12 @@ while True:
 
     print('-' * line_length)
 
-    if number in unique_numbers:
-        print(f'{'\033[1;33m'}Este valor já existe na lista! Então não vou adicionar...{'\033[m'}')
-    else:
+    if number not in unique_numbers:
         unique_numbers.append(number)
         print(f'{'\033[1;32m'}Valor adicionado com sucesso!{'\033[m'}')
-    
+    else:
+        print(f'{'\033[1;33m'}Este valor já existe na lista! Então não vou adicionar...{'\033[m'}')
+        
     print('-' * line_length)
 
     while True:
@@ -40,6 +40,6 @@ while True:
     if answer == 'N':
         break
 
-unique_numbers = unique_numbers.sort()
+unique_numbers.sort()
 
 print(f'* Valores digitados: {'\033[1;33m'}{unique_numbers}{'\033[m'}')
