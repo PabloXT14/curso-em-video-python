@@ -25,25 +25,27 @@ for i in range(numbers_amount):
 
     print('-' * line_length)
 
-    if len(numbers_list) == 0:
+    if i == 0 or number_typed > numbers_list[-1]:
         numbers_list.append(number_typed)
         
         print(f'{'\033[1;33m'}Valor {number_typed} adicionado ao final da lista{'\033[m'}')
     else:
-        for i, number in enumerate(numbers_list):
+        # for i, number in enumerate(numbers_list):
+        #     if number_typed <= number:
+        #         numbers_list.insert(i, number_typed)
 
-            if number_typed < number:
-                numbers_list.insert(i, number_typed)
+        #         print(f'{'\033[1;33m'}Valor {number_typed} adicionado na posição {i}{'\033[m'}')
 
-                print(f'{'\033[1;33m'}Valor {number_typed} adicionado na posição {i}{'\033[m'}')
-
+        #         break
+        
+        # OR
+        position = 0
+        while position < len(numbers_list):
+            if number_typed <= numbers_list[position]:
+                numbers_list.insert(position, number_typed)
+                print(f'{'\033[1;33m'}Valor {number_typed} adicionado na posição {position}{'\033[m'}')
                 break
-            elif (i == len(numbers_list) - 1) and (number_typed >= number):
-                numbers_list.append(number_typed)
-
-                print(f'{'\033[1;33m'}Valor {number_typed} adicionado ao final da lista{'\033[m'}')
-
-                break
+            position += 1
 
     print('-' * line_length)
 
