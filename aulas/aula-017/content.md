@@ -1,6 +1,5 @@
 # Listas (parte 1)
 
-
 ## Introdução às Lista
 
 As listas são estruturas de dados em Python que permitem armazenar e organizar coleções de itens, em outras palavras são variáveis compostas que permitem armazenar vários valores em uma mesma estrutura. Esses itens podem ser de qualquer tipo, como números, strings, ou até mesmo outras listas. Listas são mutáveis, o que significa que você pode modificar, adicionar ou remover elementos após a criação.
@@ -11,6 +10,10 @@ Para criar uma lista, você pode usar colchetes `[]` e inserir os elementos sepa
 
 ```py
 minha_lista = [1, 2, 3, 4, 5]
+
+# OR
+
+minha_lista = list(1, 2, 3, 4, 5)
 ```
 
 Você também pode criar uma lista com `range`:
