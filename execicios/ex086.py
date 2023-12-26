@@ -31,8 +31,8 @@ for line in range(0, lines_amount):
 print('-' * line_length)
 
 for line in matriz:
-    for column in line:
-        number = column
+    for column, value in enumerate(line):
+        number = value
 
         print(f'[{'\033[1;33m'}{number:^5}{'\033[m'}]', end='')
 
