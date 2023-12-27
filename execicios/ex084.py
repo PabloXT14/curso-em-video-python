@@ -23,11 +23,10 @@ heaviest_people = []
 lighter_people = []
 
 while True:
-    person = []
     print(f'{'-' * int((line_length - 10) / 2)} {len(people) + 1}ª PESSOA {'-' * int((line_length - 10) / 2)}')
 
     name = str(input('Nome: '))
-    weight = int(input('Peso (kg): '))
+    weight = float(input('Peso (kg): '))
 
     person = [name, weight]
 
@@ -44,11 +43,19 @@ while True:
 
     person.clear()
 
+    print('-' * line_length)
+
     while True:
         answer = str(input('Deseja continuar? (S/N): ')).strip().upper()
 
-        if answer in 'SN':
+        if answer in ('S', 'N'):
             break
+        else:
+            print('-' * line_length)
+
+            print(f'{'\033[1;31m'}Opção inválida. Digite S para continuar ou N para sair.{'\033[m'}')
+            
+            print('-' * line_length)
     
     print('-' * line_length)
     
@@ -67,5 +74,5 @@ for person in people:
 
 
 print(f'* Quantidade de pessoas cadastradas: {'\033[1;33m'}{len(people)}{'\033[m'}')
-print(f'* Pessoas mais pesadas ({highest_weight:.2f} kg): {'\033[1;33m'}{heaviest_people}{'\033[m'}')
-print(f'* Pessoas mais leves ({lowest_weight:.2f} kg): {'\033[1;33m'}{lighter_people}{'\033[m'}')
+print(f'* Pessoas mais pesadas ({highest_weight:.2f} kg): {'\033[1;33m'}{", ".join(heaviest_people)}{'\033[m'}')
+print(f'* Pessoas mais leves ({lowest_weight:.2f} kg): {'\033[1;33m'}{", ".join(lighter_people)}{'\033[m'}')
