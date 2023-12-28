@@ -15,8 +15,9 @@ print('# Lista com Pares e Ímpares')
 print('-' * line_length)
 
 numbers = [[], []]
+numbers_amount = 7
 
-for i in range(0, 7):
+for i in range(0, numbers_amount):
     number = int(input(f'Digite o {i + 1}º valor: '))
 
     if number % 2 == 0:
