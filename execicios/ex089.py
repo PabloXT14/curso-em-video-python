@@ -15,7 +15,6 @@ print('-' * line_length)
 print(f'{'\033[1;33m'}{'BOLETIM ESCOLAR':^{line_length}}{'\033[m'}')
 
 count_students = 0
-student_index = 0
 students_list = []
 
 # Cadastrando Estudantes
@@ -37,12 +36,18 @@ while True:
     print('-' * line_length)
 
     while True:
-        can_continue = str(input('Deseja cadastras mas um aluno? (S/N): ')).strip().upper()
+        answer = str(input('Deseja cadastras mas um aluno? (S/N): ')).strip().upper()
 
-        if can_continue == 'S' or can_continue == 'N':
+        if answer in ('S', 'N'):
             break
+        else:
+            print('-' * line_length)
+
+            print(f'{'\033[1;31m'}Opção inválida. Digite S para continuar ou N para sair.{'\033[m'}')
+
+            print('-' * line_length)
     
-    if can_continue == 'N':
+    if answer == 'N':
         break
 
 print('-' * line_length)
