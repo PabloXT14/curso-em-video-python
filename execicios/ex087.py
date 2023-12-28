@@ -57,6 +57,8 @@ for line_index, line_value in enumerate(matriz):
 
 print('-' * line_length)
 
-print(f'* Soma dos valores pares: {even_sum}')
-print(f'* Soma dos valores da 3ª coluna: {sum_column_3}')
-print(f'* Maior valor da segunda linha: {higher_second_line}')
+print(f'* Soma dos valores pares: {'\033[1;33m'}{even_sum}{'\033[m'}')
+print(f'* Soma dos valores da 3ª coluna: {'\033[1;33m'}{sum_column_3}{'\033[m'}')
+print(f'* Maior valor da segunda linha: {'\033[1;33m'}{higher_second_line}{'\033[m'}')
+
+print('-' * line_length)
