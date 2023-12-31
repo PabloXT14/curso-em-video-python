@@ -24,24 +24,28 @@ stop_random_range = 6
 # Dicionário para armazenar os resultados dos jogadores
 players_results = {}
 
-for player in range(0, players_amount):
-    dice_result = randint(start_random_range, stop_random_range)
-    players_results[f'Jogador {player + 1}'] = dice_result
-
-# Exibindo resultados antes da ordenação
 print(f'{'\033[1;35m'}{'VALORES SORTEADOS':^{line_length}}{'\033[m'}')
 
 print('-' * line_length)
 
-for player, result in players_results.items():
+# Gerando e exibindo resultados do dado de cada jogador
+for player in range(0, players_amount):
+    dice_result = randint(start_random_range, stop_random_range)
+    players_results[f'Jogador {player + 1}'] = dice_result
+
+    # Exibindo resultados antes da ordenação
     sleep(1)
-    print(f'* {player}: {'\033[1;33m'}{result}{'\033[m'}')
+    print(f'* {f'Jogador {player + 1}'}: {'\033[1;33m'}{players_results[f'Jogador {player + 1}']}{'\033[m'}')
 
 print('-' * line_length)
 
 # Ordenando o dicionário pelos valores (resultado do dado) em ordem decrescente
 '''
-Neste exemplo, sorted() é usado com a função lambda como a chave de ordenação. O argumento item[1] no lambda representa o valor associado a cada chave no dicionário. Isso ordenará o dicionário pelos valores em ordem crescente.
+Neste exemplo, sorted() é usado com a função lambda como a chave de ordenação.
+
+O argumento item[1] no lambda representa o valor associado a cada chave no dicionário. Isso ordenará o dicionário pelos valores em ordem crescente.
+
+Se quiser ordenar pela chave basta substituir o 1 pelo 0, ou se quiser ordenar por um campo específico do dicionário basta substituir o 1 pelo nome do campo
 
 Se você quiser ordenar em ordem decrescente, você pode adicionar o argumento reverse=True à função sorted()
 '''
