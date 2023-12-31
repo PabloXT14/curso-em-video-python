@@ -73,11 +73,21 @@ for person in people:
         women.append(person['name'])
     
     if person['age'] > average_age:
-        above_average_age.append(person['name'])
+        above_average_age.append({'name': person['name'], 'age': person['age']})
 
 print(f'* Quantidade de pessoas cadastradas: {'\033[1;33m'}{len(people)}{'\033[m'}')
 print(f'* Média de idade do grupo: {'\033[1;33m'}{average_age}{'\033[m'}')
 print(f'* Lista de mulheres: {'\033[1;33m'}{', '.join(women)}{'\033[m'}')
-print(f'* Lista de pessoas com idade acima da média: {'\033[1;33m'}{', '.join(above_average_age)}{'\033[m'}')
+print(f'* Lista de pessoas com idade acima da média: ', end='')
+
+for person in above_average_age:
+    name = person['name']
+    age = person['age']
+    is_last_item = person == above_average_age[len(above_average_age) - 1]
+
+    if is_last_item:
+        print(f'{'\033[1;33m'}{name} ({age}){'\033[m'}')
+    else:
+        print(f'{'\033[1;33m'}{name} ({age}){'\033[m'}', end=', ')
 
 print('-' * line_length)
