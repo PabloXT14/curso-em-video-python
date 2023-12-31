@@ -32,7 +32,7 @@ else:
 print('-' * line_length)
 
 print(f'* Nome do aluno: {student["name"]}')
-print(f'* Média: {student["average"]}')
+print(f'* Média: {student["average"]:.2f}')
 print(f'* Situação: {student["status_color"]}{student["status"].upper()}{'\033[m'}')
 
 print('-' * line_length)
