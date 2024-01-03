@@ -10,9 +10,9 @@ Ex:
 escreva('Olá, Mundo!')
 
 Saída:
-~~~~~~~~~~~
-Olá, Mundo!
-~~~~~~~~~~~
+~~~~~~~~~~~~~~~
+  Olá, Mundo!
+~~~~~~~~~~~~~~~
 '''
 
 # Resolução:
@@ -25,9 +25,10 @@ def header(line_symbol = '-', text = '', text_color = '\033[1;32m'):
     print(line_symbol * line_length)
 
 def write(text = '', line_symbol = '~'):
-    text_size = len(text)
+    extra_size = 4
+    text_size = len(text) + extra_size
     print(line_symbol * text_size)
-    print(text)
+    print(f'{text:^{text_size}}')
     print(line_symbol * text_size)
 
 header(text='Um print especial')
