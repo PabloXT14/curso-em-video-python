@@ -11,7 +11,6 @@ Seu programa tem que analisar todos os valores e dizer qual deles é o maior.
 # Resolução:
 
 from time import sleep
-from sys import __stdout__
 
 line_length = 70
 
@@ -22,13 +21,12 @@ def header(text = '', text_color = '\033[1;36m', line_symbol = '-'):
 
 
 def higher(*numbers):
-    higher_number = max(numbers)
+    higher_number = max(numbers) if len(numbers) > 0 else 0
     print('* Valores: ', end='')
 
     for number in numbers:
-        __stdout__.flush() # Limpar buffer de memória
+        print(f'{'\033[1;33m'}{number}{'\033[m'}', end=' | ', flush=True)
         sleep(0.5)
-        print(f'{'\033[1;33m'}{number}{'\033[m'}', end=' | ')
 
     print() # Quebra de linha
 
@@ -51,6 +49,6 @@ higher(-1, 3, 5, 8, 10)
 
 print('-' * line_length)
 
-higher(0)
+higher()
 
 print('-' * line_length)
