@@ -19,7 +19,6 @@ Se o seu código está parando de executar quando você usa a função sleep den
 # Resolução:
 
 from time import sleep
-from sys import __stdout__
 from os import get_terminal_size
 
 line_length = get_terminal_size().columns
@@ -29,11 +28,15 @@ def header(text = '', text_color = '\033[1;33m', line_symbol = '-'):
     print(f'{text_color}{text.upper():^{line_length}}{'\033[m'}')
     print(line_symbol * line_length)
 
+# 1ª Solução
+'''
 def counter(start, stop, step = 1):
+    print(f'Contagem de {start} até {stop}, de {abs(step)} em {abs(step)} = ', end='', flush=True)
+
+    sleep(2.5)
+
     if step == 0:
         step = 1
-
-    print(f'Contagem de {start} até {stop}, de {step} em {step} = ', end='')
     
     if (start > stop) and step > 0:
         step *= -1
@@ -44,11 +47,33 @@ def counter(start, stop, step = 1):
         stop -= 1
 
     for i in range(start, stop, step):
-        __stdout__.flush()
+        print(f'{'\033[1;33m'}{i}{'\033[m'}', end=' | ', flush=True) # flush=True: limpa o buffer da memória do print, pois este buffer que impede o print de tela quando se tem um sleep() dentro de uma função
         sleep(0.5)
-        print(f'{'\033[1;33m'}{i}{'\033[m'}', end=' | ')
     print()
+'''
 
+# 2ª Solução
+def counter(start, stop, step = 1):
+    step = abs(step) if step != 0 else 1
+
+    print(f'Contagem de {start} até {stop}, de {step} em {step}: ', end='', flush=True)
+
+    sleep(2.5)
+
+    if start < stop:
+        count = start
+        while count <= stop:
+            print(f'{'\033[1;33m'}{count}{'\033[m'}', end=' | ', flush=True)
+            sleep(0.5)
+            count += step
+        print()
+    else:
+        count = start
+        while count >= stop:
+            print(f'{'\033[1;33m'}{count}{'\033[m'}', end=' | ', flush=True)
+            sleep(0.5)
+            count -= step
+        print()
 header('Função de Contador')
 
 counter(1, 10)
