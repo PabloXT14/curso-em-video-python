@@ -18,7 +18,7 @@ def header(line_symbol = '-', text = 'header', text_color = '\033[1;32m'):
 def area(width, length):
     result = width * length
 
-    print(f'A área do terreno de {width}m X {length}m = {result}m²')
+    print(f'A área do terreno de {width}m x {length}m = {result}m²')
 
 
 header(text='Função que calcula área')
