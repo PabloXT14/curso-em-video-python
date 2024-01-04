@@ -10,18 +10,15 @@ Faça um programa que tenha uma lista chamada números e duas funções chamadas
 
 from random import randint
 from time import sleep
-from sys import __stdout__
-
 
 line_length = 70
+numbers = []
 
 def header(text = '', text_color = '\033[1;35m', line_symbol = '-'):
     print(line_symbol * line_length)
     print(f'{text_color}{text.upper():^{line_length}}{'\033[m'}')
     print(line_symbol * line_length)
 
-
-numbers = []
 
 def raffle(numbers_list = []):
     amount_numbers = 5
@@ -36,10 +33,9 @@ def raffle(numbers_list = []):
 
         numbers_list.append(random_number)
 
-        __stdout__.flush() # Limpando buffer de memória
         sleep(0.5)
 
-        print(f'{'\033[1;33m'}{random_number}{'\033[m'}', end=' | ')
+        print(f'{'\033[1;33m'}{random_number}{'\033[m'}', end=' | ', flush=True) # flush=True -> Limpando buffer de memória
     print()
 
 
@@ -53,10 +49,9 @@ def even_sum(numbers_list = []):
     print('* Números pares: ', end='')
 
     for number in even_numbers:
-        __stdout__.flush()
         sleep(0.5)
 
-        print(f'{'\033[1;33m'}{number}{'\033[m'}', end=' | ')
+        print(f'{'\033[1;33m'}{number}{'\033[m'}', end=' | ', flush=True)
     
     print()
 
