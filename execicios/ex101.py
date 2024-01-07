@@ -12,8 +12,6 @@ Crie um programa que tenha uma função chamada voto(), que vai receber como par
 
 # Resolução:
 
-from datetime import datetime
-
 line_length = 70
 
 def header(text = '', text_color = '\033[1;32m', line_symbol = '-'):
@@ -21,10 +19,14 @@ def header(text = '', text_color = '\033[1;32m', line_symbol = '-'):
     print(f'{text_color}{text.upper():^{line_length}}{'\033[m'}')
     print(line_symbol * line_length)
 
-def vote(birth_year):
+def vote(birth_year: int):
+    from datetime import datetime
+
     person_status = ''
 
-    person_age = int(datetime.now().year - birth_year)
+    current_year = datetime.now().year
+
+    person_age = current_year - birth_year
 
     if person_age < 16:
         person_status = f'{'\033[1;31m'}VOTO NEGADO{'\033[m'}'
