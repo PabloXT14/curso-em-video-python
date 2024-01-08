@@ -30,7 +30,7 @@ def grades(*student_grades, show_status = False):
 
     Parâmetros:
     - *student_grades (float): Notas dos alunos (tamanho indefinido).
-    - show_status (bool, opcional, default=False): Se True, inclui a situação/status da turma (BOM, MEDIANO ou RUIM) na saída.
+    - show_status (bool, opcional, default=False): Se True, inclui a situação/status da turma na saída.
 
     Retorna:
     - result: Um dicionário contendo as seguintes informações:
@@ -38,28 +38,25 @@ def grades(*student_grades, show_status = False):
         - 'higher_grade': A maior nota,
         - 'lower_grade': A menor nota,
         - 'average_class': A média da turma,
-        - 'status' (opcional): Situação da turma (BOM, MEDIANO ou RUIM)
+        - 'status' (opcional): Situação da turma (BOM, MEDIANO, RUIM ou INDEFINIDO)
     """
+    result = dict()
 
-    grades_amount = len(student_grades)
-    higher_grade = max(student_grades)
-    lower_grade = min(student_grades)
-    average_class = round(sum(student_grades) / len(student_grades), 1)
+    result['grades_amount'] = len(student_grades)
+    result['higher_grade'] = max(student_grades)
+    result['lower_grade'] = min(student_grades)
+    result['average_class'] = round(sum(student_grades) / len(student_grades), 1)
 
-    if average_class >= 7:
-        status = f'{'\033[1;32m'}BOM{'\033[m'}'
-    elif 5 <= average_class < 7:
-        status = f'{'\033[1;33m'}MEDIANO{'\033[m'}'
+    if show_status == False:
+        result['status'] = f'{'\033[1;33m'}INDEFINIDO{'\033[m'}'
+        return result
+
+    if result['average_class'] >= 7:
+        result['status'] = f'{'\033[1;32m'}BOM{'\033[m'}'
+    elif 5 <= result['average_class'] < 7:
+        result['status'] = f'{'\033[1;33m'}MEDIANO{'\033[m'}'
     else:
-        status = f'{'\033[1;31m'}RUIM{'\033[m'}'
-
-    result = {
-        'grades_amount': grades_amount,
-        'higher_grade': higher_grade,
-        'lower_grade': lower_grade,
-        'average_class': average_class,
-        'status': status if show_status else f'{'\033[1;33m'}INDEFINIDO{'\033[m'}'
-    }
+        result['status'] = f'{'\033[1;31m'}RUIM{'\033[m'}'
 
     return result
 
