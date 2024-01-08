@@ -22,7 +22,10 @@ def factorial(number, show = False):
 
     Parâmetros:
     - numero (int): O número para o qual o fatorial será calculado.
-    - show (bool): Um valor lógico indicando se o processo de cálculo será mostrado (padrão é False)
+    - show (bool, default = False): Um valor lógico indicando se o processo de cálculo será mostrado
+
+     Retorna:
+    - result: resultado do cálculo fatorial
     """
     count = number
     result = 1
@@ -42,7 +45,7 @@ def factorial(number, show = False):
             result *= count
             count -= 1
 
-    print(f'{'\033[1;33m'}{result}{'\033[m'}')
+    return result
 
 header('Cálculo Fatorial')
 
@@ -62,6 +65,6 @@ while True:
 
 print('-' * line_length)
 
-factorial(number, show)
+print(f'{'\033[1;33m'}{factorial(number, show)}{'\033[m'}')
 
 print('-' * line_length)
