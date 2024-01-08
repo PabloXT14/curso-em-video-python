@@ -17,7 +17,7 @@ def header(text = '', text_color = '\033[1;35m', line_symbol = '-'):
     print(f'{text_color}{text.upper():^{line_length}}{'\033[m'}')
     print(line_symbol * line_length)
 
-def token(name, goals):
+def token(name = '', goals = 0):
     token_length = 30
 
     if not name:
@@ -25,10 +25,10 @@ def token(name, goals):
     else:
         name = str(name).upper()
 
-    if not goals:
-        goals = 0
-    else:
+    if str(goals).isnumeric():
         goals = int(goals)
+    else:
+        goals = 0
 
     print(f'+{'-' * int(token_length * 1/3)}-{'-' * int(token_length * 2/3)}+')
 
