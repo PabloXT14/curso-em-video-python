@@ -24,6 +24,7 @@ def read_int(message):
         response = input(message)
 
         if response.isdigit():
+            response = int(response)
             break
         else:
             print('-' * line_length)
