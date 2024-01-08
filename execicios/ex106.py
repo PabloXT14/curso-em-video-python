@@ -14,8 +14,8 @@ from os import get_terminal_size
 
 line_length = get_terminal_size().columns
 
-def header(text = '', text_color = '\033[1;32m', line_symbol = '-'):
-    print('\033[1;37;42m')
+def header(text = '', header_color = '\033[1;37;42m', line_symbol = '-'):
+    print(header_color)
 
     print(' ' * line_length)
     print(f'{text.upper():^{line_length}}')
@@ -36,6 +36,6 @@ while True:
 
     sleep(0.5)
 
-    print('\033[1;107m')
+    print('\033[1;97;107m')
     help(data)
-    print('\033[m')
+    print('\033[m',)
