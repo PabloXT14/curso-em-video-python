@@ -111,4 +111,4 @@ def summary(price = 0, increase_percentage = 10, decrease_percentage = 10):
     print(f'* Metade de {currency(price)}: {'\033[1;33m'}{half(price, price_format=True)}{'\033[m'}')
     print(f'* Dobro de {currency(price)}: {'\033[1;33m'}{double(price, price_format=True)}{'\033[m'}')
     print(f'* Aumentando {increase_percentage}% (em {currency(price)}) temos: {'\033[1;33m'}{increase(price, increase_percentage, price_format=True)}{'\033[m'}')
-    print(f'* Diminuindo {decrease_percentage}% (em {currency(price)}) temos: {'\033[1;33m'}{decrease(price, increase_percentage, price_format=True)}{'\033[m'}')
+    print(f'* Diminuindo {decrease_percentage}% (em {currency(price)}) temos: {'\033[1;33m'}{decrease(price, decrease_percentage, price_format=True)}{'\033[m'}')
