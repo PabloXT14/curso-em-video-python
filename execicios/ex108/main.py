@@ -3,7 +3,7 @@ from moeda import half, double, increase, decrease, currency
 
 line_length = 70
 
-utils.header('Exercitando Módulos em Python')
+utils.header('Formatando Moedas em Python')
 
 price = float(input('Digite um preço (R$): '))
 
