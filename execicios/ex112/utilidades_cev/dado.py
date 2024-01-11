@@ -1,8 +1,17 @@
-def read_money(message = 'Something'):
+def read_money(message = ''):
+    """
+    Faz a leitura de um valor monetário vindo do input do usuário, validando se é um valor numérico válido. 
+
+    Parâmetros:
+    - message (str, default = ''): A mensagem para solicitar a entrada do usuário.
+
+    Returna:
+    - float: O valor monetário validado inserido pelo usuário.
+    """
     line_length = 70
 
     while True:
-        response = input(message).replace(',', '.')
+        response = input(message).strip().replace(',', '.')
     
         response_without_point = response.replace('.', '')
 
