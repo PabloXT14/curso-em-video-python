@@ -1,5 +1,6 @@
 import os
 
+line_length = 70
 script_dir = os.path.dirname(os.path.abspath(__file__))
 filename = os.path.join(script_dir, 'people.txt')
 
